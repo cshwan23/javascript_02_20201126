@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<script type="text/javascript">
+		function getSum(num){
+			var tot = 0;
+			for(var i=0;i<=num ; i++){
+
+				tot=tot+i;
+			}
+			return tot;
+
+		}
+
+
+	</script>
+
+
+
+</head>
+<body>
+	<script type="text/javascript">
+		document.write("합계 : " + getSum(5) + "<br>");
+		document.write("tot값 : " + tot + "<br>");
+	</script>
+
+</body>
+</html>
+<!-- 
+--------------------------------------------------
+<문>에러 이유는?
+--------------------------------------------------
+  => 에러발생 지점은 document.write("tot값 : " + tot + "<br>"); 
+  => 함수 안에서 var 로 선언된 지역 변수는 함수 외부에서 호출 불가능
+  => var tot = 0; 에서 var를 생략하면 전역변수가 되므로 호출 가능
+-------------------------------------------------- 
+
+
+ -->
+
+
+
+

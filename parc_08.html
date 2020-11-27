@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var id_cnt=0;
+		var pwd_cnt=0;
+		var id_error=3;
+		var pwd_error=3;
+
+
+
+		function check_id(){
+
+			var id = prompt("아이디 입력 요망","");
+
+			if(id!="abc"){
+
+				id_cnt++;
+
+
+				if(id_cnt<id_error){
+				check_id();
+				}
+
+			}
+
+		}
+
+		function check_pwd(){
+
+			var pwd = prompt("비밀번호 입력 요망","");
+
+			if(pwd!="123"){
+
+				pwd_cnt++;
+
+				if(pwd_cnt<pwd_error){
+					check_pwd();
+				}
+			}
+		}
+
+		function controll(){
+
+
+			check_id();
+
+			if (id_cnt==id_error){
+				document.write(id_error+"회 잘못입력으로 로그인실패");
+				return;
+			}
+
+			check_pwd();
+			if(pwd_cnt==pwd_error){
+				document.write(pwd_error+"회 잘못 입력으로 로그인실패");
+				return;
+			}
+
+		document.write("로그인 성공..");
+		}
+
+
+
+		controll();
+
+
+
+
+
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
